@@ -30,5 +30,5 @@ public class VendaEntity {
 
     @UpdateTimestamp
     @Column(name = "mudado_em")
-    private LocalDateTime mudadoEm;
+    private LocalDateTime alteradoEm;
 }
