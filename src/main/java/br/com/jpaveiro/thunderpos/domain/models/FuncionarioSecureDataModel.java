@@ -1,8 +1,6 @@
 package br.com.jpaveiro.thunderpos.domain.models;
 
-import br.com.jpaveiro.thunderpos.domain.enums.ECargo;
 import br.com.jpaveiro.thunderpos.domain.enums.ENivelPermissao;
-import br.com.jpaveiro.thunderpos.infrastructure.entities.FuncionarioEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
