@@ -2,6 +2,7 @@ package br.com.jpaveiro.thunderpos.infrastructure.exceptionHandlers;
 
 import br.com.jpaveiro.thunderpos.domain.core.StandardResponse;
 import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -21,7 +22,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT)
                 .body(new StandardResponse(
                         HttpStatus.CONFLICT,
-                        e.getMessage()
+                        "Erro! Entidade já existente."
                 ));
     }
 
@@ -32,6 +33,16 @@ public class GlobalExceptionHandler {
                 .body(new StandardResponse(
                         HttpStatus.BAD_REQUEST,
                         "Erro! Parâmetro inválido: ".concat(e.getMessage())
+                ));
+    }
+
+    @ExceptionHandler(value = { EntityNotFoundException.class })
+    public ResponseEntity<StandardResponse> handleEntityNotFoundException(final EntityNotFoundException e)
+    {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(new StandardResponse(
+                        HttpStatus.NOT_FOUND,
+                        "Erro! Entidade não existente."
                 ));
     }
 }
