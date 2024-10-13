@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.security.InvalidParameterException;
-import java.sql.SQLSyntaxErrorException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
