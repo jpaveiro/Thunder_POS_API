@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class CriarFuncionarioController implements IControllerContract<CriarFuncionarioDTO, StandardResponse> {
     private final CriarFuncionarioUsecase usecase;
 
-    @Autowired
     public CriarFuncionarioController(CriarFuncionarioUsecase usecase)
     {
         this.usecase = usecase;
@@ -31,7 +30,7 @@ public class CriarFuncionarioController implements IControllerContract<CriarFunc
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 new StandardResponse(
                         HttpStatus.CREATED,
-                        "Sucesso! O usuário foi criado.")
+                        "Sucesso! A entidade foi criada.")
         );
     }
 
