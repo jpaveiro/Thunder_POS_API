@@ -5,7 +5,6 @@ import br.com.jpaveiro.thunderpos.domain.enums.ECargo;
 import br.com.jpaveiro.thunderpos.infrastructure.dtos.CriarFuncionarioDTO;
 import br.com.jpaveiro.thunderpos.infrastructure.entities.FuncionarioEntity;
 import br.com.jpaveiro.thunderpos.infrastructure.repositories.FuncionarioRepository;
-import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
