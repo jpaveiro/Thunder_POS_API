@@ -3,7 +3,9 @@ package br.com.jpaveiro.thunderpos.infrastructure.dtos;
 import br.com.jpaveiro.thunderpos.domain.enums.ECargo;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 
+@Builder
 public record CriarFuncionarioDTO(
         @NotNull(message = "Erro! Nome não preenchido.") @NotEmpty(message = "Erro! Nome não preenchido.") String nome,
         @NotNull(message = "Erro! CPF não preenchido.") @NotEmpty(message = "Erro! CPF não preenchido.") String cpf,
