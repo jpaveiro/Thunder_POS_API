@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: thunder-pos
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/ThunderPos_API
+    username: root
+    password: root
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
