@@ -28,8 +28,8 @@ public class UsuarioEntity {
 
     @Column(
             length = 14,
-            nullable = true,
             unique = true,
+            nullable = true,
             updatable = false
 
     )
@@ -45,14 +45,11 @@ public class UsuarioEntity {
     @Column(name = "nivel_permissao", nullable = false)
     private ENivelPermissao nivelPermissao;
 
-    @Column(name = "data_nascimento", nullable = true)
-    private LocalDate dataNascimento;
-
     @CreationTimestamp
     @Column(name = "registrado_em")
     private LocalDateTime registradoEm;
 
     @UpdateTimestamp
     @Column(name = "mudado_em")
-    private LocalDateTime mudadoEm;
+    private LocalDateTime alteradoEm;
 }
