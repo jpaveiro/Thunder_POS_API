@@ -9,7 +9,6 @@ import br.com.jpaveiro.thunderpos.infrastructure.dtos.CriarFuncionarioDTO;
 import br.com.jpaveiro.thunderpos.infrastructure.entities.FuncionarioEntity;
 import br.com.jpaveiro.thunderpos.infrastructure.repositories.FuncionarioRepository;
 import jakarta.persistence.EntityExistsException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.security.InvalidParameterException;
@@ -29,7 +28,7 @@ public class CriarFuncionarioUsecase implements IUsecaseContract<CriarFuncionari
     public Void run(CriarFuncionarioDTO dto) {
         if (repository.existsByEmailOrCpf(dto.email(), dto.cpf()))
         {
-            throw new EntityExistsException("Erro! O usuário já existe.");
+            throw new EntityExistsException();
         }
         if (!Utils.validarEmail(dto.email()))
         {
