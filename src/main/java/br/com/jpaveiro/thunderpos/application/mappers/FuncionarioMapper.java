@@ -2,6 +2,7 @@ package br.com.jpaveiro.thunderpos.application.mappers;
 
 import br.com.jpaveiro.thunderpos.domain.aggregates.FuncionarioAggregate;
 import br.com.jpaveiro.thunderpos.domain.contracts.IMapperContract;
+import br.com.jpaveiro.thunderpos.domain.models.FuncionarioSecureDataModel;
 import br.com.jpaveiro.thunderpos.infrastructure.entities.FuncionarioEntity;
 import org.springframework.stereotype.Service;
 
@@ -35,5 +36,20 @@ public class FuncionarioMapper implements IMapperContract<FuncionarioEntity, Fun
             funcionarioAggregate.getAlteradoEm(),
             funcionarioAggregate.getCargo()
     );
+    }
+
+    public FuncionarioSecureDataModel toSecureModel(FuncionarioEntity entity)
+    {
+        return new FuncionarioSecureDataModel(
+                entity.getId(),
+                entity.getNome(),
+                entity.getCpf(),
+                entity.getEmail(),
+                entity.getCargo().getNomeFuncao(),
+                entity.getCargo().getSalario(),
+                entity.getNivelPermissao(),
+                entity.getRegistradoEm(),
+                entity.getAlteradoEm()
+        );
     }
 }
