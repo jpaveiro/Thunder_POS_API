@@ -30,7 +30,7 @@ public class CriarFuncionarioController implements IControllerContract<CriarFunc
         usecase.run(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 new StandardResponse(
-                        HttpStatus.ACCEPTED,
+                        HttpStatus.CREATED,
                         "Sucesso! O usuário foi criado.")
         );
     }
