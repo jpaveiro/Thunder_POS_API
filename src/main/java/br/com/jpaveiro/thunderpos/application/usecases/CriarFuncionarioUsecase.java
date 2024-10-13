@@ -19,7 +19,6 @@ public class CriarFuncionarioUsecase implements IUsecaseContract<CriarFuncionari
     private final FuncionarioRepository repository;
     private final FuncionarioMapper mapper;
 
-    @Autowired
     public CriarFuncionarioUsecase(FuncionarioRepository repository, FuncionarioMapper mapper)
     {
         this.repository = repository;
