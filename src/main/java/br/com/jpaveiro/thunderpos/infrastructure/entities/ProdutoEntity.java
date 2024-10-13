@@ -29,7 +29,7 @@ public class ProdutoEntity {
 
     @CreationTimestamp
     @Column(name = "registrado_em")
-    private LocalDateTime registradoEm;
+    private LocalDateTime alteradoEm;
 
     @UpdateTimestamp
     @Column(name = "mudado_em")
