@@ -3,7 +3,7 @@ package br.com.jpaveiro.thunderpos.infrastructure.controllers;
 import br.com.jpaveiro.thunderpos.domain.core.StandardResponse;
 import br.com.jpaveiro.thunderpos.domain.enums.ECargo;
 import br.com.jpaveiro.thunderpos.infrastructure.controllers.Funcionario.CriarFuncionarioController;
-import br.com.jpaveiro.thunderpos.infrastructure.dtos.CriarFuncionarioDTO;
+import br.com.jpaveiro.thunderpos.infrastructure.dtos.Funcionario.CriarFuncionarioDTO;
 import br.com.jpaveiro.thunderpos.infrastructure.entities.FuncionarioEntity;
 import br.com.jpaveiro.thunderpos.infrastructure.repositories.FuncionarioRepository;
 import org.junit.jupiter.api.AfterEach;
