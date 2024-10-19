@@ -5,7 +5,7 @@ import br.com.jpaveiro.thunderpos.application.utils.Utils;
 import br.com.jpaveiro.thunderpos.domain.aggregates.FuncionarioAggregate;
 import br.com.jpaveiro.thunderpos.domain.contracts.IUsecaseContract;
 import br.com.jpaveiro.thunderpos.domain.enums.ENivelPermissao;
-import br.com.jpaveiro.thunderpos.infrastructure.dtos.CriarFuncionarioDTO;
+import br.com.jpaveiro.thunderpos.infrastructure.dtos.Funcionario.CriarFuncionarioDTO;
 import br.com.jpaveiro.thunderpos.infrastructure.entities.FuncionarioEntity;
 import br.com.jpaveiro.thunderpos.infrastructure.repositories.FuncionarioRepository;
 import jakarta.persistence.EntityExistsException;
@@ -30,7 +30,7 @@ public class CriarFuncionarioUsecase implements IUsecaseContract<CriarFuncionari
         {
             throw new EntityExistsException();
         }
-        if (!Utils.validarEmail(dto.email()))
+        else if (!Utils.validarEmail(dto.email()))
         {
             throw new InvalidParameterException("email");
         }
