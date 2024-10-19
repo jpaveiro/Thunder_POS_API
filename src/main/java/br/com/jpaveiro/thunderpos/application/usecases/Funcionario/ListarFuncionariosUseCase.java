@@ -1,4 +1,4 @@
-package br.com.jpaveiro.thunderpos.application.usecases;
+package br.com.jpaveiro.thunderpos.application.usecases.Funcionario;
 
 import br.com.jpaveiro.thunderpos.application.mappers.FuncionarioMapper;
 import br.com.jpaveiro.thunderpos.domain.contracts.IUsecaseContract;

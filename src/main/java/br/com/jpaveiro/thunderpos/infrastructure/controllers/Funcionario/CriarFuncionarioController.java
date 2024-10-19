@@ -1,11 +1,10 @@
-package br.com.jpaveiro.thunderpos.infrastructure.controllers;
+package br.com.jpaveiro.thunderpos.infrastructure.controllers.Funcionario;
 
-import br.com.jpaveiro.thunderpos.application.usecases.CriarFuncionarioUsecase;
+import br.com.jpaveiro.thunderpos.application.usecases.Funcionario.CriarFuncionarioUsecase;
 import br.com.jpaveiro.thunderpos.domain.contracts.IControllerContract;
 import br.com.jpaveiro.thunderpos.domain.core.StandardResponse;
 import br.com.jpaveiro.thunderpos.infrastructure.dtos.CriarFuncionarioDTO;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

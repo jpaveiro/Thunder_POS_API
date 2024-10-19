@@ -1,6 +1,6 @@
-package br.com.jpaveiro.thunderpos.infrastructure.controllers;
+package br.com.jpaveiro.thunderpos.infrastructure.controllers.Funcionario;
 
-import br.com.jpaveiro.thunderpos.application.usecases.DeletarFuncionarioUsecase;
+import br.com.jpaveiro.thunderpos.application.usecases.Funcionario.DeletarFuncionarioUsecase;
 import br.com.jpaveiro.thunderpos.domain.contracts.IControllerContract;
 import br.com.jpaveiro.thunderpos.domain.core.StandardResponse;
 import org.springframework.http.HttpStatus;

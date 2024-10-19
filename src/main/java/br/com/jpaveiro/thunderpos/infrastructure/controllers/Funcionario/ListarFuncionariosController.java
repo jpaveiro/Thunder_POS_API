@@ -1,6 +1,6 @@
-package br.com.jpaveiro.thunderpos.infrastructure.controllers;
+package br.com.jpaveiro.thunderpos.infrastructure.controllers.Funcionario;
 
-import br.com.jpaveiro.thunderpos.application.usecases.ListarFuncionariosUseCase;
+import br.com.jpaveiro.thunderpos.application.usecases.Funcionario.ListarFuncionariosUseCase;
 import br.com.jpaveiro.thunderpos.domain.contracts.IControllerContract;
 import br.com.jpaveiro.thunderpos.domain.models.FuncionarioSecureDataModel;
 import org.springframework.http.HttpStatus;
