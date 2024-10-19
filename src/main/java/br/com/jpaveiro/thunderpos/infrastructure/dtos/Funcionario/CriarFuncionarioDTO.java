@@ -1,4 +1,4 @@
-package br.com.jpaveiro.thunderpos.infrastructure.dtos;
+package br.com.jpaveiro.thunderpos.infrastructure.dtos.Funcionario;
 
 import br.com.jpaveiro.thunderpos.domain.enums.ECargo;
 import jakarta.validation.constraints.NotEmpty;
